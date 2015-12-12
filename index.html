@@ -16,6 +16,7 @@ title: 杜忠波的个人网站
 			<a href="###" class="index-article-a">12123</a>
 		</li>
 	</ul>
+	<div class="article" style="display:none"></div>
 </div>
 
 <script src="js/json2.js"></script>
@@ -56,26 +57,34 @@ $(function () {
 	});
 	var m = new M;
 	var v = new V({model:m});
-});
-
-// 路由与历史管理
-var Workspace = Backbone.Router.extend({
-	routes: {
-		'article/:year/:month/:date/:title':'showDetail',// #article/kiwis
-	},
-	showDetail:function (year,month,date,title) {
-		var url = '/'+year+'/'+month+'/'+date+'/'+title;
-		for(var i=0,data=aData.article,len=data.length;i<len;i++){
-			if(data[i].url==url){
-				console.log(data[i].content);
-				$('.index').html(data[i].content);
+	// 初始状态加hash方便回退管理
+	location.hash='index';
+	// 路由与历史管理
+	var Workspace = Backbone.Router.extend({
+		routes: {
+			'article/:year/:month/:date/:title':'showDetail',// #article/kiwis
+			'index':"index"
+		},
+		showDetail:function (year,month,date,title) {
+			var url = '/'+year+'/'+month+'/'+date+'/'+title;
+			for(var i=0,data=aData.article,len=data.length;i<len;i++){
+				if(data[i].url==url){
+					console.log(data[i].content);
+					$('.article').html(data[i].content).show();
+					$('.index-article-ul').hide();
+				}
 			}
+		},
+		index:function () {
+			$('.article').hide();
+			$('.index-article-ul').show();
 		}
-	}
+	});
+
+	var w = new Workspace;
+	Backbone.history.start();
 });
 
-var w = new Workspace;
-Backbone.history.start();
 
 
 
