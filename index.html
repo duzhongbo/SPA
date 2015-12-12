@@ -46,8 +46,11 @@ $(function () {
 		events:{
 			'click a':'showDetail',
 		},
-		showDetail:function () {
-			alert(1);
+		showDetail:function (e) {
+			var target = e.target || e.srcElement;
+			console.log(target);
+			var url = $(target).attr('href');
+			location.hash='article'+url;
 			return false;
 		}
 	});
@@ -55,7 +58,32 @@ $(function () {
 	var v = new V({model:m});
 });
 
+// 路由与历史管理
+var Workspace = Backbone.Router.extend({
+	routes: {
+		'article/:year/:month/:date/:title':'showDetail',// #article/kiwis
+	},
+	showDetail:function (year,month,date,title) {
+		var url = '/'+year+'/'+month+'/'+date+'/'+title;
+		for(var i=0,data=aData.article,len=data.length;i<len;i++){
+			if(data[i].url==url){
+				console.log(data[i].content);
+				$('.index').html(data[i].content);
+			}
+		}
+	}
+});
+
+var w = new Workspace;
+Backbone.history.start();
+
+
+
 </script>
+
+
+
+
 
 <script type="text/template" id="template">
 
