@@ -41,11 +41,17 @@ $(function () {
 		show:function (model) {
 			$('.index-article-ul').html(this.template(this.model.toJSON()));
 		},
-		template:_.template($('#template').html())
+		template:_.template($('#template').html()),
+		el:$('body'),
+		events:{
+			'click a':'showDetail',
+		},
+		showDetail:function () {
+			alert(1);
+		}
 	});
 	var m = new M;
 	var v = new V({model:m});
-
 });
 
 </script>
@@ -54,7 +60,7 @@ $(function () {
 
 <% for(var i=0,len=data.length;i<len;i++) { %>
 	<li class="index-article-li">
-		<a href="###" class="index-article-a"><%= data[i].title %></a>
+		<a href="<%= data[i].url %>" class="index-article-a"><%= data[i].title %></a>
 	</li>
 <% } %>
 
