@@ -22,7 +22,8 @@ var dataSearch = '['+
 			{% if tag != post.tags[0] %}','+{% endif %}
 			'"{{tag}}"'+
 			{% endfor %}
-			']'+
+			'],'+
+			'"comment":""'+
 		'}'+
 	{% endfor %}
 ']';
