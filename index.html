@@ -15,7 +15,7 @@ var dataSearch = '['+
 			'"title":"{{post.title}}",'+
 			'"content":"{{post.content | strip_newlines |escape}}",'+// 过滤换行符,将内容字符串化
 			'"date":"{{post.date | date:"%d/%m/%Y"}}",'+
-			'"img":"{{post.customer.img}}"'+
+			'"img":"{{post.customer.img}}",'+
 			'"tags":'+
 			'['+
 			{% for tag in post.tags %}
@@ -26,8 +26,8 @@ var dataSearch = '['+
 		'}'+
 	{% endfor %}
 ']';
-// dataSearch=dataSearch.replace(/\s/g,'');// 过滤空白字符
-// dataSearch = JSON.parse(dataSearch);// 字符串格式化
+dataSearch=dataSearch.replace(/\s*/g,'');// 过滤空白字符
+dataSearch = JSON.parse(dataSearch);// 字符串格式化
 
 // 博客的全部数据
 var aData = {
