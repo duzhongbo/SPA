@@ -52,7 +52,7 @@ $(function () {
 
 <script type="text/template" id="template">
 
-<% for(var i=0;i<5;i++) { %>
+<% for(var i=0,len=data.length;i<len;i++) { %>
 	<li class="index-article-li">
 		<a href="###" class="index-article-a"><%= data[i].title %></a>
 	</li>
