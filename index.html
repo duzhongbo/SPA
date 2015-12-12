@@ -18,5 +18,44 @@ title: 杜忠波的个人网站
 	</ul>
 </div>
 
+<script src="js/json2.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/backbone.js"></script>
+<script src="js/backbone.localStorage.js"></script>
+<script src="js/main.js"></script>
 
+<!-- 引入数据 -->
 {% include data.html %}	
+<script type="text/javascript">
+$(function () {
+	var M = Backbone.Model.extend({
+		defaults : {
+			data : aData.article
+		}
+	});
+	var V = Backbone.View.extend({
+		initialize : function () {
+			this.show();
+		},
+		show:function (model) {
+			$('.index-article-ul').html(this.template(this.model.toJSON()));
+		},
+		template:_.template($('#template').html())
+	});
+	var m = new M;
+	var v = new V({model:m});
+
+});
+
+</script>
+
+<script type="text/template" id="template">
+
+<% for(var i=0;i<5;i++) { %>
+	<li class="index-article-li">
+		<a href="###" class="index-article-a"><%= data[i].title %></a>
+	</li>
+<% } %>
+
+</script>
