@@ -7,7 +7,7 @@ title: 杜忠波的个人网站
 
 <script type="text/javascript">
 // 在内存中构建所有文章的json数据
-var dataSearch = '['+
+var aArticle = '['+
 	{% for post in site.posts] %}
 		{% if post != site.posts[0] %}','+{% endif %}
 		'{'+
@@ -27,8 +27,19 @@ var dataSearch = '['+
 		'}'+
 	{% endfor %}
 ']';
-dataSearch=dataSearch.replace(/\s*/g,'');// 过滤空白字符
-dataSearch = JSON.parse(dataSearch);// 字符串格式化
+aArticle=aArticle.replace(/\s*/g,'');// 过滤空白字符
+aArticle = JSON.parse(aArticle);// 字符串格式化
+
+// 构建标签数据
+var aTags = '['+
+	{% for tag in site.tags %}
+		{% if tag[0] != site.tags.first[0] %}','+{% endif %}
+		'"{{ tag[0] }}"'+
+	{% endfor %}
+']';
+var aTags = JSON.parse(aTags);
+
+
 
 // 博客的全部数据
 var aData = {
