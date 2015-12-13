@@ -65,7 +65,7 @@ $(function () {
 				temp2 = decodeURI(temp1.url);
 				if(temp2==url){
 					$('.article-title').html(temp1.title);
-					$('.article-content').html(temp1.content);
+					$('.article-content').html(toHtml(temp1.content));
 					$('.article-date').html(temp1.date);
 					$('.article').show();
 					$('.index-article-ul').hide();
@@ -80,6 +80,14 @@ $(function () {
 
 	var w = new Workspace;
 	Backbone.history.start();
+
+	// 将已经转义的html标签重新转回
+	function toHtml (str) {
+		var reg = /&lt;/g,reg2 = /&gt;/g;
+		str = str.replace(reg,'<');
+		str = str.replace(reg2,'>');
+		return str;
+	}
 });
 
 
