@@ -1,5 +1,7 @@
 body{margin: 0;padding: 0}
+img{border-radius: 10px;}
 .tar{text-align: right;}
+.tac{text-align: center;}
 .index{width: 500px;background: #000;padding: 10px;margin: 0 auto;color: #fff;border-radius: 10px;}
 .index-article-li{margin-bottom: 10px;}
 .index-article-a{color: #fff;text-decoration: underline;font-size: 12px;}
