@@ -29,10 +29,10 @@ $(function () {
 			return false;
 		},
 		changeBg:function () {
-			var sQuery  = '.'+aBg[0];
+			var sOld  = aBg[0];
 			var first= aBg.shift();
 			aBg.push(first);
-			$(sQuery).toggleClass(aBg[0]);
+			$('.wrap').addClass(aBg[0]).removeClass(sOld);
 		}
 	});
 	var m = new M;
