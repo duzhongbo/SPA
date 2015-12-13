@@ -3,7 +3,9 @@ layout: default
 title: 杜忠波的个人网站
 ---
 
-
+<div class="nav">
+	<a href="/">首页</a>
+</div>
 <div class="index">
 	<ul class="index-article-ul">
 		<li class="index-article-li">
@@ -30,11 +32,14 @@ title: 杜忠波的个人网站
 {% include data.html %}	
 <script type="text/javascript">
 $(function () {
+	// 文章列表模型
 	var M = Backbone.Model.extend({
 		defaults : {
 			data : aData.article
 		}
 	});
+
+	// 文章列表视图
 	var V = Backbone.View.extend({
 		initialize : function () {
 			this.show();
@@ -56,11 +61,24 @@ $(function () {
 	});
 	var m = new M;
 	var v = new V({model:m});
-	
+
+	// 导航视图
+	var vNav = Backbone.View.extend({
+		el:$('.nav'),
+		events:{
+			'click a':'nav'
+		},
+		nav:function (e) {
+			var target = e.target || e.srcElement;
+			location.hash = '';
+			return false;
+		}
+	})
+	var vNav1 = new vNav;
 	// 路由与历史管理
 	var Workspace = Backbone.Router.extend({
 		routes: {
-			'':'index',// 只有域名的情况
+			'':'index',// 只有域名的情况,首页
 			'article/:year/:month/:date/:title':'showDetail',// #article/kiwis
 		},
 		showDetail:function (year,month,date,title) {
@@ -73,6 +91,7 @@ $(function () {
 			}
 		},
 		index:function () {
+			console.log(12)
 			$('.article').hide();
 			$('.index-article-ul').show();
 		}
