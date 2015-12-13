@@ -1,7 +1,7 @@
 <script type="text/javascript">
 $(function () {
 	// 文章列表模型
-	var M = Backbone.Model.extend({
+	var mArticle = Backbone.Model.extend({
 		defaults : {
 			data : aData.article
 		}
@@ -9,11 +9,11 @@ $(function () {
 	// 背景图
 	var aBg = ['bg0','bg1','bg2'];
 	// 首页视图
-	var V = Backbone.View.extend({
+	var vIndex = Backbone.View.extend({
 		initialize : function () {
-			this.show();
+			this.renderArticleList();
 		},
-		show:function (model) {
+		renderArticleList:function (model) {
 			$('.index-article-ul').html(this.template(this.model.toJSON()));
 		},
 		template:_.template($('#template').html()),
@@ -35,8 +35,8 @@ $(function () {
 			$('.wrap').addClass(aBg[0]).removeClass(sOld);
 		}
 	});
-	var m = new M;
-	var v = new V({model:m});
+	var mArticle1 = new mArticle;
+	var vIndex = new vIndex({model:mArticle1});
 
 	// 导航视图
 	var vNav = Backbone.View.extend({
