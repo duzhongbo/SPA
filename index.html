@@ -57,13 +57,12 @@ $(function () {
 	});
 	var m = new M;
 	var v = new V({model:m});
-	// 初始状态加hash方便回退管理
-	location.hash='index';
+	
 	// 路由与历史管理
 	var Workspace = Backbone.Router.extend({
 		routes: {
+			'':'index',// 只有域名的情况
 			'article/:year/:month/:date/:title':'showDetail',// #article/kiwis
-			'index':"index"
 		},
 		showDetail:function (year,month,date,title) {
 			var url = '/'+year+'/'+month+'/'+date+'/'+title;
