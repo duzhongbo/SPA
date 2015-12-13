@@ -6,8 +6,9 @@ $(function () {
 			data : aData.article
 		}
 	});
-
-	// 文章列表视图
+	// 背景图
+	var aBg = ['bg0','bg1','bg2'];
+	// 首页视图
 	var V = Backbone.View.extend({
 		initialize : function () {
 			this.show();
@@ -16,15 +17,22 @@ $(function () {
 			$('.index-article-ul').html(this.template(this.model.toJSON()));
 		},
 		template:_.template($('#template').html()),
-		el:$('body'),
+		el:$('.index'),
 		events:{
 			'click .index-article-a':'showDetail',
+			'click .index-title':'changeBg'
 		},
 		showDetail:function (e) {
 			var target = e.target || e.srcElement;
 			var url = $(target).attr('href');
 			location.hash='article'+url;
 			return false;
+		},
+		changeBg:function () {
+			var sQuery  = '.'+aBg[0];
+			var first= aBg.shift();
+			aBg.push(first);
+			$(sQuery).toggleClass(aBg[0]);
 		}
 	});
 	var m = new M;
