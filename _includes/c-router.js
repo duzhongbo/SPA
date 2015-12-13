@@ -14,10 +14,12 @@ var Workspace = Backbone.Router.extend({
 				$('.article-date').html(temp1.date);
 				$('.article').show();
 				$('.index').hide();
+				$('.wrap').removeClass('bg1');
 			}
 		}
 	},
 	index:function () {
+		$('.wrap').addClass('bg1');
 		$('.article').hide();
 		$('.index').show();
 	}
