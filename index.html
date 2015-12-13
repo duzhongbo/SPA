@@ -49,7 +49,6 @@ $(function () {
 		},
 		showDetail:function (e) {
 			var target = e.target || e.srcElement;
-			console.log(target);
 			var url = $(target).attr('href');
 			location.hash='article'+url;
 			return false;
@@ -68,7 +67,6 @@ $(function () {
 			var url = '/'+year+'/'+month+'/'+date+'/'+title;
 			for(var i=0,data=aData.article,len=data.length;i<len;i++){
 				if(data[i].url==url){
-					console.log(data[i].content);
 					$('.article').html(data[i].content).show();
 					$('.index-article-ul').hide();
 				}
