@@ -18,7 +18,10 @@ title: 杜忠波的个人网站
 			<a href="###" class="index-article-a">12123</a>
 		</li>
 	</ul>
-	<div class="article" style="display:none"></div>
+	<div class="article" style="display:none">
+		<h3 class="article-title"></h3>
+		<div class="article-content"></div>
+	</div>
 </div>
 
 <script src="js/json2.js"></script>
@@ -85,13 +88,14 @@ $(function () {
 			var url = '/'+year+'/'+month+'/'+date+'/'+title;
 			for(var i=0,data=aData.article,len=data.length;i<len;i++){
 				if(data[i].url==url){
-					$('.article').html(data[i].content).show();
+					$('.article-title').html(data[i].title);
+					$('.article-content').html(data[i].content);
+					$('.article').show();
 					$('.index-article-ul').hide();
 				}
 			}
 		},
 		index:function () {
-			console.log(12)
 			$('.article').hide();
 			$('.index-article-ul').show();
 		}
