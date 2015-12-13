@@ -23,12 +23,12 @@ title: 杜忠波的个人网站
 <!-- 外联js -->
 {% include js.html %}	
 
-
-<!-- 引入数据 -->
-{% include m-data.html %}	
-
-<!-- 主体业务逻辑 -->
-{% include c-main.html %}
+<script type="text/javascript">
+// 引入数据
+{% include data.js %}
+// 主体业务逻辑
+{% include main.js %}
+</script>
 
 <!-- 文章列表模板 -->
 {% include tpl/articles-li.html %}	

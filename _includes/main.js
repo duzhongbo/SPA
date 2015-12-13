@@ -1,11 +1,10 @@
-<script type="text/javascript">
 $(function () {
 	// 导航视图
 	{% include view/nav.js %}
 	var vNav1 = new vNav;
 	
 	// 路由与历史管理
-	{% include c-router.js %}
+	{% include router/router.js %}
 	
 	// 文章列表模型
 	var mArticle = Backbone.Model.extend({
@@ -20,6 +19,3 @@ $(function () {
 	var vIndex = new vIndex({model:mArticle1});
 
 });
-
-
-</script>

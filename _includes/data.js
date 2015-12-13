@@ -1,4 +1,3 @@
-<script type="text/javascript">
 // 构建文章数据
 var aArticle = '['+
 	{% for post in site.posts] %}
@@ -37,6 +36,4 @@ var aData = {
 	tags:aTags, // 标签
 	article:aArticle // 文章
 }
-
-</script>
 
