@@ -7,20 +7,11 @@ title: 杜忠波的个人网站
 	<a href="/">首页</a>
 </div>
 <div class="index">
-	<ul class="index-article-ul">
-		<li class="index-article-li">
-			<a href="###" class="index-article-a">12121</a>
-		</li>
-		<li class="index-article-li">
-			<a href="###" class="index-article-a">12122</a>
-		</li>
-		<li class="index-article-li">
-			<a href="###" class="index-article-a">12123</a>
-		</li>
-	</ul>
+	<ul class="index-article-ul"></ul>
 	<div class="article" style="display:none">
 		<h3 class="article-title"></h3>
 		<div class="article-content"></div>
+		<div class="article-date tar"></div>
 	</div>
 </div>
 
@@ -91,6 +82,7 @@ $(function () {
 				if(temp==url){
 					$('.article-title').html(data[i].title);
 					$('.article-content').html(data[i].content);
+					$('.article-date').html(data[i].date);
 					$('.article').show();
 					$('.index-article-ul').hide();
 				}
