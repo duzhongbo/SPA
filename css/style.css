@@ -1,4 +1,5 @@
 body{margin: 0;padding: 0;color: #fff;font-size: 12px}
+html,body,.wrap{height: 100%;}
 img{border-radius: 10px;}
 a{color: #fff;}
 a:hover{color: #f00;}
@@ -12,8 +13,8 @@ a:hover{color: #f00;}
 .alpha-000-5{background-color: rgba(0,0,0,.5);}
 .border-b-1-s-fff{border-bottom: 1px solid #fff;}
 .bg1{background-image: url(/img/bg1.jpg);}
-.index-title{font-size: 22px;padding-bottom: 12px;}
 .index{width: 500px;padding: 10px;}
+.index-title{font-size: 22px;padding-bottom: 12px;}
 .index-article-li{margin-bottom: 10px;}
 .article-content{line-height: 20px;}
 .nav{margin-bottom: 10px;padding: 0 10px;}
