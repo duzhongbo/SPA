@@ -59,13 +59,14 @@ $(function () {
 			'article/:year/:month/:date/:title':'showDetail',// #article/kiwis
 		},
 		showDetail:function (year,month,date,title) {
-			var url = '/'+year+'/'+month+'/'+date+'/'+title,temp;
+			var url = '/'+year+'/'+month+'/'+date+'/'+title,temp1,temp2;
 			for(var i=0,data=aData.article,len=data.length;i<len;i++){
-				temp = decodeURI(data[i].url);
-				if(temp==url){
-					$('.article-title').html(data[i].title);
-					$('.article-content').html(data[i].content);
-					$('.article-date').html(data[i].date);
+				temp1 = data[i];
+				temp2 = decodeURI(temp1.url);
+				if(temp2==url){
+					$('.article-title').html(temp1.title);
+					$('.article-content').html(temp1.content);
+					$('.article-date').html(temp1.date);
 					$('.article').show();
 					$('.index-article-ul').hide();
 				}
