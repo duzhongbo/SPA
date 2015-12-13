@@ -18,7 +18,7 @@ $(function () {
 		template:_.template($('#template').html()),
 		el:$('body'),
 		events:{
-			'click a':'showDetail',
+			'click .index-article-a':'showDetail',
 		},
 		showDetail:function (e) {
 			var target = e.target || e.srcElement;
@@ -34,7 +34,7 @@ $(function () {
 	var vNav = Backbone.View.extend({
 		el:$('.nav'),
 		events:{
-			'click a':'nav'
+			'click .nav-a':'nav'
 		},
 		nav:function (e) {
 			var target = e.target || e.srcElement;

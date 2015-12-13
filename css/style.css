@@ -2,11 +2,15 @@ body{margin: 0;padding: 0}
 img{border-radius: 10px;}
 .tar{text-align: right;}
 .tac{text-align: center;}
-.index{width: 500px;background: #000;padding: 10px;margin: 0 auto;color: #fff;border-radius: 10px;}
+.bg{background-attachment: fixed;background-repeat: no-repeat;background-size: cover;background-position: 50% 50%;}
+.bg1{background-image: url(/img/bg1.jpg);}
+.index-title{font-size: 22px;border-bottom: 1px solid #fff;padding-bottom: 12px;text-decoration: underline;}
+.index-title-a{color: #fff;}
+.index{width: 500px;background: #000;padding: 10px;margin: 0 auto;color: #fff;border-radius: 10px;background-color: rgba(0,0,0,.5);}
 .index-article-li{margin-bottom: 10px;}
 .index-article-a{color: #fff;text-decoration: underline;font-size: 12px;}
 .index-article-a:hover{color: #f00;}
 .article-content{text-indent: 2em;line-height: 20px;font-size: 12px;letter-spacing:1px;}
 .nav{margin-bottom: 10px;padding: 0 10px;text-align: right;}
-.nav-a{color: #000;font-size: 12px;}
+.nav-a{color: #fff;font-size: 12px;}
 .nav-a:hover{color: #f00;}
