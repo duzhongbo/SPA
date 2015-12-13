@@ -65,7 +65,7 @@ $(function () {
 				temp2 = decodeURI(temp1.url);
 				if(temp2==url){
 					$('.article-title').html(temp1.title);
-					$('.article-content').html(toHtml(temp1.content));
+					$('.article-content').html(html_decode(temp1.content));
 					$('.article-date').html(temp1.date);
 					$('.article').show();
 					$('.index-article-ul').hide();
@@ -87,6 +87,18 @@ $(function () {
 		str = str.replace(reg,'<');
 		str = str.replace(reg2,'>');
 		return str;
+	}
+	function html_decode(str){   
+	  var s = "";   
+	  if (str.length == 0) return "";   
+	  s = str.replace(/&gt;/g, ">");   
+	  s = s.replace(/&lt;/g, "<");   
+	  s = s.replace(/&nbsp;/g, " ");   
+	  s = s.replace(/&quot;/g, "\"");   
+	  s = s.replace(/<br>/g, "\n");
+	  s = s.replace(/class/g,' class');
+	  s = s.replace(/src/g,' src');
+	  return s;   
 	}
 });
 
