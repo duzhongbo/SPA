@@ -5,7 +5,7 @@ title: 杜忠波的个人网站
 
 <div class="nav">
 	<a href="/">首页</a>
-	<a href="/tags/">标签页</a>
+	<a href="/tags">标签页</a>
 </div>
 <div class="index">
 	<ul class="index-article-ul"></ul>
@@ -65,7 +65,16 @@ $(function () {
 		},
 		nav:function (e) {
 			var target = e.target || e.srcElement;
-			location.hash = '';
+			var href = $(target).attr('href');
+			switch(href){
+				case '/':
+					location.hash = '';
+					break;
+				case '/tags':
+					console.log('标签页');
+					break;
+				default:;
+			}
 			return false;
 		}
 	})
