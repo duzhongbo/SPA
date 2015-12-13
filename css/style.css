@@ -1,5 +1,10 @@
 body{margin: 0;padding: 0}
 .tar{text-align: right;}
-.index{width: 500px;background: #000;padding: 10px;margin: 0 auto;color: #fff;}
+.index{width: 500px;background: #000;padding: 10px;margin: 0 auto;color: #fff;border-radius: 10px;}
 .index-article-li{margin-bottom: 10px;}
-.index-article-a{color: #fff;text-decoration: underline;}
+.index-article-a{color: #fff;text-decoration: underline;font-size: 12px;}
+.index-article-a:hover{color: #f00;}
+.article-content{text-indent: 2em;line-height: 20px;font-size: 12px;letter-spacing:1px;}
+.nav{margin-bottom: 10px;padding: 0 10px;text-align: right;}
+.nav-a{color: #000;font-size: 12px;}
+.nav-a:hover{color: #f00;}
