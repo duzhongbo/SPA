@@ -20,9 +20,6 @@ $(function () {
 	});
 	var model = new Model;
 
-	// 首页视图
-	{% include view/Index.js %}
-	var index = new Index({model:model});
 
 
 
