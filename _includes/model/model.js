@@ -37,3 +37,9 @@ var aData = {
 	article:aArticle // 文章
 }
 
+var Model = Backbone.Model.extend({
+	defaults : {
+		data : aData.article,
+		tags : aData.tags
+	}
+});

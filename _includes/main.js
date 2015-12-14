@@ -1,7 +1,6 @@
 // cookie操作
 {% include cookie.js %}
 // 博客全部数据
-{% include data.js %}
 $(function () {
 	// 导航视图
 	{% include view/nav.js %}
@@ -13,12 +12,7 @@ $(function () {
 	Backbone.history.start();
 	
 	// 文章列表模型
-	var Model = Backbone.Model.extend({
-		defaults : {
-			data : aData.article,
-			tags : aData.tags
-		}
-	});
+	{% include model/model.js %}
 	var model = new Model;
 
 	// 首页视图
