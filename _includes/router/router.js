@@ -14,7 +14,7 @@ var Workspace = Backbone.Router.extend({
 				$('.article-date').html(temp1.date);
 				$('.article').show();
 				$('.index').hide();
-				$('.index').attr('class','index cover');
+				$('.index').attr('class','index cover oh');
 			}
 		}
 	},
