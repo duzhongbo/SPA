@@ -1,7 +1,8 @@
 var Workspace = Backbone.Router.extend({
 	routes: {
 		'':'index',// 只有域名的情况,首页
-		'article/:year/:month/:date/:title':'showDetail',// #article/kiwis
+		'article/:year/:month/:date/:title':'showDetail',// #article/kiwis，文章详情页
+		'list':'list'// 列表页
 	},
 	showDetail:function (year,month,date,title) {
 		var url = '/'+year+'/'+month+'/'+date+'/'+title,temp1,temp2;
@@ -12,16 +13,20 @@ var Workspace = Backbone.Router.extend({
 				$('.article-title').html(temp1.title);
 				$('.article-content').html(this.html_decode(temp1.content));
 				$('.article-date').html(temp1.date);
+				$('.page').hide();
 				$('.article').show();
-				$('.index').hide();
-				$('.index').attr('class','index cover oh');
+				$('.index').attr('class','index cover oh page');
 			}
 		}
 	},
 	index:function () {
-		$('.article').hide();
+		$('.page').hide();
 		$('.index').show();
 		this.changeBg();
+	},
+	list:function () {
+		$('.page').hide();
+		$('.list').show();
 	},
 	html_decode:function (str) {// 将已经转义的html标签重新转回
 		var s = "";   

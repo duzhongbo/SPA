@@ -13,6 +13,9 @@ var vNav = Backbone.View.extend({
 			case '/tags':
 				console.log('标签页');
 				break;
+			case '/list':
+				location.hash = 'list';
+				break;
 			default:;
 		}
 		return false;
