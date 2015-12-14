@@ -1,3 +1,14 @@
 <div class="page tags common-inner" style="display:none">
-	标签页
+	<h3>标签页</h3>
+	<ul class="tags-ul"></ul>
 </div>
+
+<script type="text/template" id="tplTags">
+
+<% for(var i=0,len=tags.length;i<len;i++) { %>
+	<li class="tags-li">
+		<%= tags[i] %>
+	</li>
+<% } %>
+
+</script>

@@ -15,7 +15,8 @@ $(function () {
 	// 文章列表模型
 	var Model = Backbone.Model.extend({
 		defaults : {
-			data : aData.article
+			data : aData.article,
+			tags : aData.tags
 		}
 	});
 	var model = new Model;
@@ -31,4 +32,8 @@ $(function () {
 	// 文章页视图
 	{% include view/article.js %}
 	var article = new Article();
+
+	// 标签视图
+	{% include view/tags.js %}
+	var tags = new Tags({model:model});
 });
