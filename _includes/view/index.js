@@ -1,9 +1,11 @@
 var vIndex = Backbone.View.extend({
 	initialize : function () {
-		this.renderArticleList();
+		var oData = this.model.toJSON();
+		var aData = oData.data;
+		this.renderArticleList(oData);
 	},
-	renderArticleList:function (model) {// 渲染文章列表
-		$('.index-article-ul').html(this.template(this.model.toJSON()));
+	renderArticleList:function (oData) {// 渲染文章列表
+		$('.index-article-ul').html(this.template(oData));
 	},
 	template:_.template($('#template').html()),
 	el:$('.index'),
