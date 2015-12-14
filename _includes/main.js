@@ -7,10 +7,6 @@ $(function () {
 	{% include view/Nav.js %}
 	var nav = new Nav;
 	
-	// 路由与历史管理
-	{% include router/Router.js %}	
-	var router = new Router;
-	Backbone.history.start();
 	
 
 
