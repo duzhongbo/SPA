@@ -20,6 +20,10 @@ $(function () {
 
 	// 首页视图
 	{% include view/index.js %}
-	var vIndex = new vIndex({model:mArticle1});
+	var vIndex1 = new vIndex({model:mArticle1});
+
+	// 列表页视图
+	{% include view/list.js %}
+	var vList1 = new vList({model:mArticle1});
 
 });

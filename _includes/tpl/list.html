@@ -1,3 +1,15 @@
 <div class="list page common-inner" style="display:none">
-列表页	
+列表页
+<ul class="list-ul"></ul>
 </div>
+
+
+<script type="text/template" id="tplArticles">
+
+<% for(var i=0,len=data.length;i<len;i++) { %>
+	<li class="list-li">
+		<a href="<%= data[i].url %>" class="index-article-a"><%= data[i].title %></a>
+	</li>
+<% } %>
+
+</script>
