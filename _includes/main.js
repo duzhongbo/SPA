@@ -28,6 +28,7 @@ $(function () {
 	{% include view/list.js %}
 	var list = new List({model:model});	
 
-
-
+	// 文章页视图
+	{% include view/article.js %}
+	var article = new Article();
 });
