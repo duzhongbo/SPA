@@ -31,9 +31,10 @@ var vIndex = Backbone.View.extend({
 	},
 	page:1,
 	nextPage:function () {// 翻页
-		this.page += 1;
-		if(this.page*3>11){
-			this.page = 1;
+		if(this.page*3<11){
+			this.page+=1;
+		}else if(this.page*3>11||this.page*3==11){
+			this.page=1;
 		}
 		var nStart = (this.page - 1)*3;
 		var aData = this.aData.slice(nStart,nStart+3);
