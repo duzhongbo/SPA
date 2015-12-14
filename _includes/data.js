@@ -6,7 +6,7 @@ var aArticle = '['+
 			'"url":"{{post.url}}",'+
 			'"title":"{{post.title}}",'+
 			'"content":"{{post.content | strip_newlines |escape}}",'+// 过滤换行符,将内容字符串化
-			'"date":"{{post.date | date:"%d/%m/%Y"}}",'+
+			'"date":"{{post.date | date:"%Y/%m/%d"}}",'+
 			'"img":"{{post.customer.img}}",'+
 			'"tags":'+
 			'['+
