@@ -1,4 +1,4 @@
-var Workspace = Backbone.Router.extend({
+var Router = Backbone.Router.extend({
 	routes: {
 		'':'index',// 只有域名的情况,首页
 		'article/:year/:month/:date/:title':'showDetail',// #article/kiwis，文章详情页
@@ -55,5 +55,3 @@ var Workspace = Backbone.Router.extend({
 	}
 });
 
-var w = new Workspace;
-Backbone.history.start();

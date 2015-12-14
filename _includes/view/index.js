@@ -1,4 +1,4 @@
-var vIndex = Backbone.View.extend({
+var Index = Backbone.View.extend({
 	initialize : function () {
 		var oData = this.model.toJSON();
 		this.aData = oData.data;

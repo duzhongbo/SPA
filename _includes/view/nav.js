@@ -1,4 +1,4 @@
-var vNav = Backbone.View.extend({
+var Nav = Backbone.View.extend({
 	el:$('.nav'),
 	events:{
 		'click .nav-a':'nav'

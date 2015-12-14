@@ -1,4 +1,4 @@
-var vList = Backbone.View.extend({
+var List = Backbone.View.extend({
 	initialize:function () {
 		var oData = this.model.toJSON();
 		this.aData = oData.data;
