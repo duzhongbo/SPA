@@ -23,7 +23,8 @@ var Index = Backbone.View.extend({
 	el:$('.index'),
 	events:{
 		'click .index-article-a':'showDetail',
-		'click .index-title':'nextPage'
+		'click .index-title':'nextPage',
+		'click .index-more':'more'
 	},
 	showDetail:function (e) {// 改变hash值，触发路由显示相应的页面
 		var target = e.target || e.srcElement;
@@ -44,5 +45,9 @@ var Index = Backbone.View.extend({
 			data:aData
 		};
 		$('.index-article-ul').html(this.template(oData));
+	},
+	more:function () {
+		location.hash = 'list';
+		return false;
 	}
 });
