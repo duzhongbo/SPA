@@ -34,5 +34,6 @@ a:hover{color: #f00;}
 .index-article-li{margin-bottom: 10px;}
 .article{width: 80%;margin-top: 25px;}
 .article-content{line-height: 20px;}
-
+.list{width: 80%;}
+.list-li{line-height: 22px;}
 
