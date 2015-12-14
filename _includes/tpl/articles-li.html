@@ -1,0 +1,9 @@
+<script type="text/template" id="template">
+
+<% for(var i=0,len=data.length;i<3&&data[i];i++) { %>
+	<li class="index-article-li">
+		<a href="<%= data[i].url %>" class="index-article-a"><%= data[i].title %></a>
+	</li>
+<% } %>
+
+</script>
