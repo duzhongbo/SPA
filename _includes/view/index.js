@@ -1,7 +1,7 @@
 var vIndex = Backbone.View.extend({
 	initialize : function () {
 		var oData = this.model.toJSON();
-		var aData = oData.data;
+		this.aData = oData.data;
 		this.renderArticleList(oData);
 	},
 	renderArticleList:function (oData) {// 渲染文章列表
@@ -26,8 +26,20 @@ var vIndex = Backbone.View.extend({
 		var first= aBg.shift();
 		aBg.push(first);
 		$('.wrap').addClass(aBg[0]).removeClass(sOld);
+
+		this.nextPage();
 	},
-	nextPage:function (nStart) {// 翻页
-		
+	page:1,
+	nextPage:function () {// 翻页
+		this.page += 1;
+		if(this.page*3>11){
+			this.page = 1;
+		}
+		var nStart = (this.page - 1)*3;
+		var aData = this.aData.slice(nStart,nStart+3);
+		var oData = {
+			data:aData
+		};
+		$('.index-article-ul').html(this.template(oData));
 	}
 });
