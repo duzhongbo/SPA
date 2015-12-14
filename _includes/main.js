@@ -25,7 +25,7 @@ $(function () {
 	var index = new Index({model:model});
 
 	// 列表页视图
-	{% include view/list.js %}
+	{% include view/List.js %}
 	var list = new List({model:model});
 
 });
