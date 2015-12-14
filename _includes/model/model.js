@@ -31,15 +31,9 @@ var aTags = '['+
 ']';
 var aTags = JSON.parse(aTags);
 
-// 博客的全部数据
-var aData = {
-	tags:aTags, // 标签
-	article:aArticle // 文章
-}
-
 var Model = Backbone.Model.extend({
 	defaults : {
-		data : aData.article,
-		tags : aData.tags
+		article : aArticle,
+		tags : aTags
 	}
 });

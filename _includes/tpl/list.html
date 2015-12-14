@@ -6,10 +6,10 @@
 
 <script type="text/template" id="tplArticles">
 
-<% for(var i=0,len=data.length;i<len;i++) { %>
+<% for(var i=0,len=article.length;i<len;i++) { %>
 	<li class="list-li">
-		<span class="fr"><%= data[i].date %></span>
-		<a href="<%= data[i].url %>" class="list-li-a"><%= data[i].title %></a>
+		<span class="fr"><%= article[i].date %></span>
+		<a href="<%= article[i].url %>" class="list-li-a"><%= article[i].title %></a>
 	</li>
 <% } %>
 

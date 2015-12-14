@@ -1,7 +1,7 @@
 var Index = Backbone.View.extend({
 	initialize : function () {
 		var oData = this.model.toJSON();
-		this.aData = oData.data;
+		this.aData = oData.article;
 		this.renderArticleList(oData);
 
 		//
@@ -42,7 +42,7 @@ var Index = Backbone.View.extend({
 		var nStart = (this.page - 1)*3;
 		var aData = this.aData.slice(nStart,nStart+3);
 		var oData = {
-			data:aData
+			article:aData
 		};
 		$('.index-article-ul').html(this.template(oData));
 	},

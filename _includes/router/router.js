@@ -7,7 +7,7 @@ var Router = Backbone.Router.extend({
 	},
 	showDetail:function (year,month,date,title) {
 		var url = '/'+year+'/'+month+'/'+date+'/'+title,temp1,temp2;
-		for(var i=0,data=aData.article,len=data.length;i<len;i++){
+		for(var i=0,data=aArticle,len=data.length;i<len;i++){
 			temp1 = data[i];
 			temp2 = decodeURI(temp1.url);
 			if(temp2==url){

@@ -6,14 +6,14 @@ $(function () {
 	{% include view/nav.js %}
 	var nav = new Nav;
 	
-	// 路由与历史管理
-	{% include router/router.js %}	
-	var router = new Router;
-	Backbone.history.start();
-	
-	// 文章列表模型
+	// 博客全部数据
 	{% include model/model.js %}
 	var model = new Model;
+	
+	// 路由与历史管理
+	{% include router/router.js %}	
+	var router = new Router({model:model});
+	Backbone.history.start();
 
 	// 首页视图
 	{% include view/index.js %}
