@@ -2,6 +2,7 @@
 
 <% for(var i=0,len=data.length;i<3&&data[i];i++) { %>
 	<li class="index-article-li">
+		<span class="fr"><%= data[i].date %></span>
 		<a href="<%= data[i].url %>" class="index-article-a"><%= data[i].title %></a>
 	</li>
 <% } %>
