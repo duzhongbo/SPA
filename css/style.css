@@ -14,9 +14,9 @@ a:hover{color: #f00;}
 .alpha-000-5{background-color: rgba(0,0,0,.5);}
 .alpha-000-7{background-color: rgba(0,0,0,.7);}
 .border-b-1-s-fff{border-bottom: 1px solid #fff;}
-.bg0{background-image: url(/imgs/bg0.jpg);}
-.bg1{background-image: url(/imgs/bg1.jpg);}
-.bg2{background-image: url(/imgs/bg2.jpg);}
+.bg0{background-image: url(../imgs/bg0.jpg);}
+.bg1{background-image: url(../imgs/bg1.jpg);}
+.bg2{background-image: url(../imgs/bg2.jpg);}
 
 .nav{margin-bottom: 10px;padding: 0 10px;line-height: 25px;}
 .nav a{color: #fff;}
