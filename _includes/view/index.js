@@ -15,9 +15,6 @@ var vIndex = Backbone.View.extend({
 			nBg=0;
 		}
 		setCookie('nBg',nBg,365);
-		this.nBg = nBg;
-
-		this.changeBg();
 	},
 	renderArticleList:function (oData) {// 渲染文章列表
 		$('.index-article-ul').html(this.template(oData));
@@ -33,16 +30,6 @@ var vIndex = Backbone.View.extend({
 		var url = $(target).attr('href');
 		location.hash='article'+url;
 		return false;
-	},
-	aBg:['bg0','bg1','bg2'],
-	changeBg:function () {// 切换首页的背景
-
-		// var aBg = this.aBg;
-		// var sOld  = aBg[0];
-		// var first= aBg.shift();
-		// aBg.push(first);
-		var cls = 'bg'+getCookie('nBg')
-		$('.wrap').addClass(cls);
 	},
 	page:1,
 	nextPage:function () {// 翻页

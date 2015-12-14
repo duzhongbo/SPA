@@ -22,6 +22,7 @@ var Workspace = Backbone.Router.extend({
 		$('.article').hide();
 		$('.index').show();
 		$('.wrap').attr('class','wrap cover bg0');
+		this.changeBg();
 	},
 	html_decode:function (str) {// 将已经转义的html标签重新转回
 		var s = "";   
@@ -34,6 +35,10 @@ var Workspace = Backbone.Router.extend({
 		s = s.replace(/class/g,' class');
 		s = s.replace(/src/g,' src');
 		return s;   
+	},
+	changeBg:function () {
+		var cls = 'bg'+getCookie('nBg')
+		$('.wrap').addClass(cls);
 	}
 });
 
