@@ -11,7 +11,7 @@ var vIndex = Backbone.View.extend({
 	el:$('.index'),
 	events:{
 		'click .index-article-a':'showDetail',
-		'click .index-title':'changeBg'
+		'click .index-title':'nextPage'
 	},
 	showDetail:function (e) {// 改变hash值，触发路由显示相应的页面
 		var target = e.target || e.srcElement;
@@ -26,8 +26,6 @@ var vIndex = Backbone.View.extend({
 		var first= aBg.shift();
 		aBg.push(first);
 		$('.wrap').addClass(aBg[0]).removeClass(sOld);
-
-		this.nextPage();
 	},
 	page:1,
 	nextPage:function () {// 翻页
