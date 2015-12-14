@@ -14,14 +14,13 @@ var Workspace = Backbone.Router.extend({
 				$('.article-date').html(temp1.date);
 				$('.article').show();
 				$('.index').hide();
-				$('.wrap').attr('class','wrap cover');
+				$('.index').attr('class','index cover');
 			}
 		}
 	},
 	index:function () {
 		$('.article').hide();
 		$('.index').show();
-		$('.wrap').attr('class','wrap cover bg0');
 		this.changeBg();
 	},
 	html_decode:function (str) {// 将已经转义的html标签重新转回
@@ -37,8 +36,12 @@ var Workspace = Backbone.Router.extend({
 		return s;   
 	},
 	changeBg:function () {
-		var cls = 'bg'+getCookie('nBg')
-		$('.wrap').addClass(cls);
+		var nBg = getCookie('nBg');
+		if(!nBg){
+			nBg = 0;
+		}
+		var cls = 'index-bg'+nBg
+		$('.index').addClass(cls);
 	}
 });
 
