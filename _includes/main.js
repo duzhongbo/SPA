@@ -12,13 +12,6 @@ $(function () {
 	var router = new Router;
 	Backbone.history.start();
 	
-	// 文章列表模型
-	var Model = Backbone.Model.extend({
-		defaults : {
-			data : aData.article
-		}
-	});
-	var model = new Model;
 
 
 
