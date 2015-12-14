@@ -4,7 +4,7 @@
 {% include data.js %}
 $(function () {
 	// 导航视图
-	{% include view/Nav.js %}
+	{% include data.js %}
 	var nav = new Nav;
 	
 
