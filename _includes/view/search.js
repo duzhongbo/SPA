@@ -10,6 +10,8 @@ var Search = Backbone.View.extend({
 		console.log('click',val);
 		if(val== ''||val=='搜索'){
 			alert('输入不能为空！');
+		}else{
+			location.hash='search='+val;
 		}
 	},
 	blur:function () {

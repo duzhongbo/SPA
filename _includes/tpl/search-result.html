@@ -1,0 +1,15 @@
+<div class="search-result auto oh page" style="display:none">
+	<h3 class="search-result-title">搜索结果：</h3>
+	<ul class="search-result-ul"></ul>
+</div>
+
+<script type="text/template" id="tplSearchArticle">
+
+<% for(var i=0,len=article.length;i<3&&article[i];i++) { %>
+	<li class="index-article-li">
+		<span class="fr"><%= article[i].date %></span>
+		<a href="<%= article[i].url %>" class="index-article-a"><%= article[i].title %></a>
+	</li>
+<% } %>
+
+</script>
