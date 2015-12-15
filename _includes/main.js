@@ -1,8 +1,8 @@
 // 公共方法
 {% include com.js %}
+{% include model/model.js %}
 $(function () {
 	
-	{% include model/model.js %}
 	var model = new Model;
 	
 	// 导航视图
