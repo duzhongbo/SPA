@@ -1,12 +1,13 @@
 // 公共方法
 {% include com.js %}
 $(function () {
-	// 导航视图
-	{% include view/nav.js %}
-	var nav = new Nav;
 	
 	{% include model/model.js %}
 	var model = new Model;
+	
+	// 导航视图
+	{% include view/nav.js %}
+	var nav = new Nav;
 	
 	// 路由与历史管理
 	{% include router/router.js %}	

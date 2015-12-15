@@ -1,4 +1,4 @@
-// 博客数据
+// 文章数据
 var aArticle = '['+
 	{% for post in site.posts] %}
 		{% if post != site.posts[0] %}','+{% endif %}
@@ -22,7 +22,7 @@ var aArticle = '['+
 aArticle=aArticle.replace(/\s*/g,'');// 过滤空白字符
 aArticle = JSON.parse(aArticle);// 字符串格式化
 
-// 构建标签数据
+// 标签数据
 var aTags = '['+
 	{% for tag in site.tags %}
 		{% if tag[0] != site.tags.first[0] %}','+{% endif %}
