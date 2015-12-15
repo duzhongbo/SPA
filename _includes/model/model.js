@@ -31,6 +31,26 @@ var aTags = '['+
 ']';
 var aTags = JSON.parse(aTags);
 
+// 以标签为键值组织的文章json
+var aData = '{'+
+	{% for tag in site.tags %}
+		{% if tag[0] != site.tags.first[0] %}','+{% endif %}
+		'"{{ tag[0] }}":'+
+		'['+
+		{% for post in tag[1] %}
+		{% if post != tag[1].first %}','+{% endif %}
+		'{'+
+			'"url":"{{post.url}}",'+
+			'"title":"{{post.title}}",'+
+			'"date":"{{post.date | date:"%d/%m/%Y"}}"'+
+		'}'+
+		{% endfor %}
+		']'+
+	{% endfor %}
+'}';
+var aData = JSON.parse(aData);
+
+
 var Model = Backbone.Model.extend({
 	defaults : {
 		article : aArticle,

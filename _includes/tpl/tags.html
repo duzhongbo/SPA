@@ -1,6 +1,9 @@
 <div class="page tags common-inner" style="display:none">
 	<h3>标签页</h3>
 	<ul class="tags-ul"></ul>
+	<ul class="tags-articles-ul">
+		
+	</ul>
 </div>
 
 <script type="text/template" id="tplTags">
@@ -9,6 +12,18 @@
 	<li class="tags-li">
 		<a class="tags-a" href="/tag=<%= tags[i] %>">
 			<%= tags[i] %>
+		</a>		
+	</li>
+<% } %>
+
+</script>
+
+<script type="text/template" id="tplTagArticles">
+
+<% for(var i=0,len=article.length;i<len;i++) { %>
+	<li class="tags-articles-li">
+		<a class="tags-articles-a" href="/tag=<%= article[i].url %>">
+			<%= article[i].title %>
 		</a>		
 	</li>
 <% } %>
