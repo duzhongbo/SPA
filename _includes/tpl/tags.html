@@ -7,7 +7,9 @@
 
 <% for(var i=0,len=tags.length;i<len;i++) { %>
 	<li class="tags-li">
-		<%= tags[i] %>
+		<a class="tags-a" href="/tag=<%= tags[i] %>">
+			<%= tags[i] %>
+		</a>		
 	</li>
 <% } %>
 
