@@ -6,12 +6,14 @@ var Search = Backbone.View.extend({
 		'focus .search-it':'focus',
 	},
 	click:function () {
-		var val = $('.search-it').val();
+		var val = $('.search-it').val(),aRes;
 		console.log('click',val);
 		if(val== ''||val=='搜索'){
 			alert('输入不能为空！');
 		}else{
 			location.hash='search='+val;
+			aRes=com.search(val,aArticle);
+			console.log(aRes);
 		}
 	},
 	blur:function () {

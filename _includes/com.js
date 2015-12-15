@@ -51,5 +51,15 @@ var com={
 				break;
 			}
 		}		
+	},
+	search:function (keyword,aData) {
+		var data=[];
+		for(var i=0,len=aData.length;i<len;i++){
+			if(aData[i]['title'].indexOf(keyword)!=-1
+				||aData[i]['content'].indexOf(keyword)!=-1){
+				data.push(aData[i]);
+			}
+		}
+		return data;
 	}
 }
