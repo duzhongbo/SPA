@@ -20,10 +20,10 @@
 
 <script type="text/template" id="tplTagArticles">
 
-<% for(var i=0,len=article.length;i<len;i++) { %>
+<% for(var i=0,len=articleTitle.length;i<len;i++) { %>
 	<li class="tags-articles-li">
-		<a class="tags-articles-a" href="/tag=<%= article[i].url %>">
-			<%= article[i].title %>
+		<a class="tags-articles-a" href="<%= articleTitle[i].url %>">
+			<%= articleTitle[i].title %>
 		</a>		
 	</li>
 <% } %>
