@@ -5,7 +5,7 @@ var Index = Backbone.View.extend({
 		this.renderArticleList(oData);
 
 		//
-		var nBg = blog.getCookie('nBg');
+		var nBg = com.getCookie('nBg');
 		if(nBg){
 			nBg++;
 			if(nBg>3||nBg==3){
@@ -14,7 +14,7 @@ var Index = Backbone.View.extend({
 		}else{
 			nBg=0;
 		}
-		blog.setCookie('nBg',nBg,365);
+		com.setCookie('nBg',nBg,365);
 	},
 	renderArticleList:function (oData) {// 渲染文章列表
 		$('.index-article-ul').html(this.template(oData));
@@ -27,7 +27,7 @@ var Index = Backbone.View.extend({
 		'click .index-more':'more'
 	},
 	showDetail:function (e) {// 改变hash值，触发路由显示相应的页面
-		return blog.showDetail(e,this.aData);
+		return com.showDetail(e,this.aData);
 	},
 	page:1,
 	nextPage:function () {// 翻页

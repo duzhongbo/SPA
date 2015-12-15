@@ -1,4 +1,4 @@
-var blog={
+var com={
 	setCookie:function (name, value, iDay) {
 		var oDate=new Date();
 		oDate.setDate(oDate.getDate()+iDay);

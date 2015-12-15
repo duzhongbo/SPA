@@ -13,6 +13,6 @@ var List = Backbone.View.extend({
 		'click .list-li-a':'showDetail'
 	},
 	showDetail:function (e) {
-		return blog.showDetail(e,this.aData);
+		return com.showDetail(e,this.aData);
 	}
 })
