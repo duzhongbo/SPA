@@ -7,7 +7,7 @@ var List = Backbone.View.extend({
 	renderArticleList:function (oData) {// 渲染文章列表
 		$('.list-ul').html(this.template(oData));
 	},
-	template:_.template($('#tplArticles').html()),
+	template:_.template($('#tplListArticles').html()),
 	el:$('.list-ul'),
 	events:{
 		'click .list-li-a':'showDetail'

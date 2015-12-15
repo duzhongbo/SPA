@@ -19,7 +19,7 @@ var Index = Backbone.View.extend({
 	renderArticleList:function (oData) {// 渲染文章列表
 		$('.index-article-ul').html(this.template(oData));
 	},
-	template:_.template($('#template').html()),
+	template:_.template($('#tplIndexArticle').html()),
 	el:$('.index'),
 	events:{
 		'click .index-article-a':'showDetail',
