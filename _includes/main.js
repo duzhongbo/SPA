@@ -8,6 +8,10 @@ $(function () {
 	// 导航视图
 	{% include view/nav.js %}
 	var nav = new Nav;
+
+	// 搜索视图
+	{% include view/search.js %}
+	var search = new Search();
 	
 	// 路由与历史管理
 	{% include router/router.js %}	
