@@ -1,5 +1,5 @@
 // cookie操作
-{% include common.js %}
+{% include com.js %}
 // 博客全部数据
 $(function () {
 	// 导航视图
