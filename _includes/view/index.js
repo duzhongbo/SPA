@@ -5,7 +5,7 @@ var Index = Backbone.View.extend({
 		this.renderArticleList(oData);
 
 		//
-		var nBg = getCookie('nBg');
+		var nBg = blog.getCookie('nBg');
 		if(nBg){
 			nBg++;
 			if(nBg>3||nBg==3){
@@ -14,7 +14,7 @@ var Index = Backbone.View.extend({
 		}else{
 			nBg=0;
 		}
-		setCookie('nBg',nBg,365);
+		blog.setCookie('nBg',nBg,365);
 	},
 	renderArticleList:function (oData) {// 渲染文章列表
 		$('.index-article-ul').html(this.template(oData));

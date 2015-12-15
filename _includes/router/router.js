@@ -18,7 +18,7 @@ var Router = Backbone.Router.extend({
 		$('.tags').show();
 	},
 	changeBg:function () {
-		var nBg = getCookie('nBg');
+		var nBg = blog.getCookie('nBg');
 		if(!nBg){
 			nBg = 0;
 		}
