@@ -7,6 +7,7 @@ a:hover{color: #f00;}
 .tar{text-align: right;}
 .tac{text-align: center;}
 .por{position: relative;}
+.fl{float: left;}
 .fr{float: right;}
 .cover{background: fixed no-repeat 50% 50%;background-size: cover;}
 .br10{border-radius: 10px;}
@@ -22,6 +23,7 @@ a:hover{color: #f00;}
 .nav-inner{padding: 0 10px;}
 .nav a{color: #fff;}
 .nav a:hover{color: #f00;}
+.search-it{width: 124px;color: #666}
 .common-inner{margin-top: 35px;}
 .index{height: 100%;background-color: #000;}
 .index-bg0{background-image: url(../imgs/bg0.jpg);}
