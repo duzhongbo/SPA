@@ -6,7 +6,11 @@ var Search = Backbone.View.extend({
 		'focus .search-it':'focus',
 	},
 	click:function () {
-		console.log('click');
+		var val = $('.search-it').val();
+		console.log('click',val);
+		if(val== ''||val=='搜索'){
+			alert('输入不能为空！');
+		}
 	},
 	blur:function () {
 		var val = $('.search-it').val();
