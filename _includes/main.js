@@ -1,12 +1,10 @@
-// cookie操作
+// 公共方法
 {% include com.js %}
-// 博客全部数据
 $(function () {
 	// 导航视图
 	{% include view/nav.js %}
 	var nav = new Nav;
 	
-	// 博客全部数据
 	{% include model/model.js %}
 	var model = new Model;
 	

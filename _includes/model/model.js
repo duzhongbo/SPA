@@ -1,4 +1,4 @@
-// 构建文章数据
+// 博客数据
 var aArticle = '['+
 	{% for post in site.posts] %}
 		{% if post != site.posts[0] %}','+{% endif %}
