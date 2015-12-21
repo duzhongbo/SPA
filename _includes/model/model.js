@@ -56,11 +56,11 @@ var aNav = [
 	text:'首页'
 },
 {
-	href:'/tags',
+	href:'/list',
 	text:'列表页'
 },
 {
-	href:'/list',
+	href:'/tags',
 	text:'标签页'
 },
 ]
