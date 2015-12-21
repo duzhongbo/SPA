@@ -7,6 +7,8 @@ a:hover{color: #f00;}
 .tar{text-align: right;}
 .tac{text-align: center;}
 .por{position: relative;}
+.poa{position: absolute;}
+.pof{position: fixed;}
 .fl{float: left;}
 .fr{float: right;}
 .cover{background: fixed no-repeat 50% 50%;background-size: cover;}
@@ -18,6 +20,9 @@ a:hover{color: #f00;}
 .alpha-000-5{background-color: rgba(0,0,0,.5);}
 .alpha-000-7{background-color: rgba(0,0,0,.7);}
 .border-b-1-s-fff{border-bottom: 1px solid #fff;}
+.pop-bg{width: 100%;height: 100%;top:0;left: 0px;}
+.pop{top:50%;left: 50%;}
+.pop-alert{width: 200px;height: 100px;background: #fff;border:1px solid #ccc;margin:-100px 0 0 -100px;}
 
 .nav{margin-bottom: 10px;line-height: 25px;position: fixed;width:100%;}
 .nav-inner{padding: 0 10px;}
