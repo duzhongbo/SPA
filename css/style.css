@@ -30,10 +30,10 @@ a:hover{color: #f60;}
 
 .nav{margin-bottom: 10px;line-height: 25px;position: fixed;width:100%;}
 .nav-inner{padding: 0 10px;color: #fff;}
-.nav-a{color: #fff;line-height: 25px;display: inline-block;padding: 0 5px;text-decoration: none;}
+.nav-a{color: #fff;line-height: 25px;float: left;padding: 0 5px;text-decoration: none;}
 .nav-a:hover{background-color: rgba(0,0,0,.5);}
 .nav-cur-a{text-decoration: none;cursor: default;background-color: rgba(0,0,0,.7);color: #f00;}
-.nav-cur-a:hover{color: #f00;}
+.nav-cur-a:hover{color: #f00;background-color: rgba(0,0,0,.7);}
 .search-it{width: 124px;color: #f00;}
 .search-bt{cursor: pointer;}
 .common-inner{margin-top: 35px;}
