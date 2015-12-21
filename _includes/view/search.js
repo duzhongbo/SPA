@@ -20,18 +20,6 @@ var Search = Backbone.View.extend({
 			}
 			$('.search-result-ul').html(this.template(oData));
 			$('.search-result').show();
-			//  搜索结果子视图
-			var View2 = Backbone.View.extend({
-				events:{
-					'click .search-result-a':'showDetail'
-				},
-				el:$('.search-result-ul'),
-				showDetail:function(){
-					console.log("hello world!");
-					return false;
-				}
-			});
-			// var v1 = new View2;
 		}
 	},
 	template:_.template($('#tplSearchArticle').html()),
