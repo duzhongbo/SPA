@@ -36,6 +36,7 @@ var Router = Backbone.Router.extend({
 		console.log(aRes);
 		com.searchResult = aRes;
 		var v = new ViewSearchResult;
+		$('.page').hide();
 		$('.search-result').show();
 	}
 });
