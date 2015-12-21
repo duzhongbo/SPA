@@ -4,7 +4,6 @@ var Search = Backbone.View.extend({
 		'click .search-bt':'click',
 		'blur .search-it':'blur',
 		'focus .search-it':'focus',
-		'click .search-result-a':'showDetail'
 	},
 	click:function (e) {
 		var val = $('.search-it').val(),aRes;
@@ -19,11 +18,11 @@ var Search = Backbone.View.extend({
 			var oData = {
 				article:aRes
 			}
-			$('.search-result-ul').html(this.template(oData));
 			$('.search-result').show();
+			com.searchResult = aRes;
+			var v = new ViewSearchResult;
 		}
 	},
-	template:_.template($('#tplSearchArticle').html()),
 	blur:function () {
 		var val = $('.search-it').val();
 		if(val==''){
@@ -36,9 +35,21 @@ var Search = Backbone.View.extend({
 			$('.search-it').val('');
 		}
 	},
+});
+
+var ViewSearchResult = Backbone.View.extend({
+	initialize:function () {
+		var oData = {
+			article:com.searchResult
+		}
+		$('.search-result-ul').html(this.template(oData));
+	},
+	template:_.template($('#tplSearchArticle').html()),
+	el:$('.search-result-ul'),
+	events:{
+		'click .search-result-a':'showDetail'
+	},
 	showDetail:function(e){
 		return com.showDetail(e,this.aData);
-		console.log("123");
-		return false;
 	}
 });

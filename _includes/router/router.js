@@ -4,6 +4,7 @@ var Router = Backbone.Router.extend({
 		'list':'list',// 列表页
 		'tags':'tags',// 标签页
 		'article/:year/:month/:date/:title':'showDetail',// #article/2015/11/05/xxoo.html文章页
+		'search=:keyword':'search'
 	},
 	index:function () {
 		$('.page').hide();
@@ -29,6 +30,10 @@ var Router = Backbone.Router.extend({
 	showDetail:function () {
 		var url = (location.hash).split('#article')[1];
 		com.filterData(url,aArticle);
+	},
+	search:function(keyword){
+		var aRes=com.search(keyword,aArticle);
+		console.log(aRes);
 	}
 });
 
