@@ -9,8 +9,6 @@ var Router = Backbone.Router.extend({
 	index:function () {
 		$('.page').hide();
 		$('.index').show();
-		console.log($('.nav-a')[0],$('.nav-a')[0].innerHTML);
-		$('.nav-a')[0].outerHTML='首页';
 		this.changeBg();
 	},
 	list:function () {
