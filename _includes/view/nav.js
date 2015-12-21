@@ -1,4 +1,11 @@
+
+
 var Nav = Backbone.View.extend({
+	initialize:function () {
+		var oData = this.model.toJSON();
+		$('.nav-inner').html(this.template(oData));
+	},
+	template:_.template($('#tplNav').html()),
 	el:$('.nav'),
 	events:{
 		'click .nav-a':'nav'

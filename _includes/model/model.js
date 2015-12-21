@@ -49,11 +49,26 @@ var aData = '{'+
 	{% endfor %}
 '}';
 var aData = JSON.parse(aData);
-
+// 导航数据
+var aNav = [
+{
+	href:'/',
+	text:'首页'
+},
+{
+	href:'/tags',
+	text:'列表页'
+},
+{
+	href:'/list',
+	text:'标签页'
+},
+]
 
 var Model = Backbone.Model.extend({
 	defaults : {
 		article : aArticle,
-		tags : aTags
+		tags : aTags,
+		aNav :aNav
 	}
 });

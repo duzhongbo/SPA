@@ -3,9 +3,13 @@
 		<input type="input" class="search-it" value="搜索">
 		<input type="button" value="搜索" class="search-bt">
 	</div>
-	<span class="nav-inner">
-		<a class="nav-a" href="/">首页</a>
-		<a class="nav-a" href="/list">列表页</a>
-		<a class="nav-a" href="/tags">标签页</a>		
-	</span>
+	<span class="nav-inner"></span>
 </div>
+
+<script type="text/template" id="tplNav">
+
+<% for(var i=0,len=aNav.length;i<len;i++) { %>
+	<a class="nav-a" href="<%= aNav[i].href %>"><%= aNav[i].text %></a>
+<% } %>
+
+</script>

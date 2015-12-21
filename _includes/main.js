@@ -7,7 +7,7 @@ $(function () {
 	
 	// 导航视图
 	{% include view/nav.js %}
-	var nav = new Nav;
+	var nav = new Nav({model:model});
 
 	// 搜索视图
 	{% include view/search.js %}
