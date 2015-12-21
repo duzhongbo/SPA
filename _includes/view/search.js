@@ -8,14 +8,13 @@ var Search = Backbone.View.extend({
 	},
 	click:function (e) {
 		var val = $('.search-it').val(),aRes;
-		console.log('click',val);
 		if(val== ''){
 			com.openPop('输入不能为空！');
 		}else{
 			location.hash='search='+val;
 			aRes=com.search(val,aArticle);
-			console.log(aRes);
 			if(!aRes.length&&$('.search-result-ul').length){
+				$('.search-result').show();
 				$('.search-result-ul')[0].outerHTML='<p class="tac fw">找到不到相关文章!</p>';
 				return;
 			}

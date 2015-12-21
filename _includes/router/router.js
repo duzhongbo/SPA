@@ -42,7 +42,11 @@ var Router = Backbone.Router.extend({
 		com.lightCurNav();
 		$('.search-it').val(keyword);
 		var aRes=com.search(keyword,aArticle);
-		console.log(aRes);
+		if(!aRes.length&&$('.search-result-ul').length){
+			$('.search-result').show();
+			$('.search-result-ul')[0].outerHTML='<p class="tac fw">找到不到相关文章!</p>';
+			return;
+		}
 		com.searchResult = aRes;
 		var v = new ViewSearchResult;
 		$('.page').hide();
