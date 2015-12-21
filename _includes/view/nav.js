@@ -16,12 +16,15 @@ var Nav = Backbone.View.extend({
 		switch(href){
 			case '/':
 				location.hash = '';
+				com.lightCurNav(target);
 				break;
 			case '/tags':
 				location.hash = 'tags';
+				com.lightCurNav(target);
 				break;
 			case '/list':
 				location.hash = 'list';
+				com.lightCurNav(target);
 				break;
 			default:;
 		}

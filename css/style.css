@@ -3,7 +3,7 @@ html,body,.wrap{height: 100%;}
 img{border-radius: 10px;}
 
 a{color: #000;}
-a:hover{color: #f00;}
+a:hover{color: #f60;}
 .tar{text-align: right;}
 .tac{text-align: center;}
 .por{position: relative;}
@@ -30,8 +30,9 @@ a:hover{color: #f00;}
 
 .nav{margin-bottom: 10px;line-height: 25px;position: fixed;width:100%;}
 .nav-inner{padding: 0 10px;color: #fff;}
-.nav a{color: #fff;}
-.nav a:hover{color: #f00;}
+.nav-a{color: #fff;}
+.nav-cur-a{color: #f00;text-decoration: none;cursor: default;}
+.nav-cur-a:hover{color: #f00;}
 .search-it{width: 124px;color: #666}
 .search-bt{cursor: pointer;}
 .common-inner{margin-top: 35px;}

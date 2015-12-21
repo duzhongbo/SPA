@@ -72,5 +72,9 @@ var com={
 		    $('.pop-tb').html('');
 			
 		});
+	},
+	lightCurNav:function(obj){
+		$('.nav-a').removeClass('nav-cur-a');
+		$(obj).addClass('nav-cur-a');
 	}
 }
