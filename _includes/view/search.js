@@ -42,6 +42,7 @@ var ViewSearchResult = Backbone.View.extend({
 		var oData = {
 			article:com.searchResult
 		}
+		this.aData = com.searchResult;
 		$('.search-result-ul').html(this.template(oData));
 	},
 	template:_.template($('#tplSearchArticle').html()),
