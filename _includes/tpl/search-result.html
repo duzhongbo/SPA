@@ -7,8 +7,16 @@
 
 <% for(var i=0,len=article.length;i<3&&article[i];i++) { %>
 	<li class="search-result-li">
-		<span class="fr"><%= article[i].date %></span>
-		<a href="<%= article[i].url %>" class="search-result-a"><%= article[i].title %></a>
+		<div class="search-result-th">
+			<span class="fr"><%= article[i].date %></span>
+			<a href="<%= article[i].url %>" class="search-result-a"><%= article[i].title %></a>
+		</div>
+		<div class="search-result-tb">
+			<% if(article[i].img) { %>
+			<img src="imgs/girl.jpg" class="fl search-result-img" width="100" alt="">
+			<% } %>
+			<span class="search-result-cont"><%= article[i].content %></span>
+		</div>
 	</li>
 <% } %>
 

@@ -52,4 +52,7 @@ a:hover{color: #f60;}
 .list{width: 80%;}
 .list-li{line-height: 22px;}
 .search-result{width: 80%;}
+.search-result-th{margin-bottom: 10px;}
+.search-result-img{margin-right: 10px;}
+.search-result-a{color: #00f;}
 
