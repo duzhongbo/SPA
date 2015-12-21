@@ -36,6 +36,7 @@ var Router = Backbone.Router.extend({
 	},
 	search:function(keyword){
 		com.lightCurNav();
+		$('.search-it').val(keyword);
 		var aRes=com.search(keyword,aArticle);
 		console.log(aRes);
 		com.searchResult = aRes;
