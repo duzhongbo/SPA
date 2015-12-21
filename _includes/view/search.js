@@ -1,9 +1,10 @@
 var Search = Backbone.View.extend({
-	el:$('.search'),
+	el:$('body'),
 	events:{
 		'click .search-bt':'click',
 		'blur .search-it':'blur',
 		'focus .search-it':'focus',
+		'click .search-result-a':'showDetail'
 	},
 	click:function () {
 		var val = $('.search-it').val(),aRes;
@@ -30,7 +31,7 @@ var Search = Backbone.View.extend({
 					return false;
 				}
 			});
-			var v1 = new View2;
+			// var v1 = new View2;
 		}
 	},
 	template:_.template($('#tplSearchArticle').html()),
@@ -45,5 +46,9 @@ var Search = Backbone.View.extend({
 		if(val=='搜索'){
 			$('.search-it').val('');
 		}
+	},
+	showDetail:function(e){
+		console.log("123");
+		return false;
 	}
 });
