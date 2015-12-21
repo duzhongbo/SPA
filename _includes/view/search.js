@@ -24,6 +24,7 @@ var Search = Backbone.View.extend({
 			}
 			$('.page').hide();
 			$('.search-result').show();
+			console.log(aRes);
 			com.searchResult = aRes;
 			var v = new ViewSearchResult;
 		}
