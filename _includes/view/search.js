@@ -6,7 +6,7 @@ var Search = Backbone.View.extend({
 		'focus .search-it':'focus',
 		'click .search-result-a':'showDetail'
 	},
-	click:function () {
+	click:function (e) {
 		var val = $('.search-it').val(),aRes;
 		console.log('click',val);
 		if(val== ''||val=='搜索'){
@@ -15,6 +15,7 @@ var Search = Backbone.View.extend({
 			location.hash='search='+val;
 			aRes=com.search(val,aArticle);
 			console.log(aRes);
+			this.aData = aRes;
 			var oData = {
 				article:aRes
 			}
@@ -36,6 +37,7 @@ var Search = Backbone.View.extend({
 		}
 	},
 	showDetail:function(e){
+		return com.showDetail(e,this.aData);
 		console.log("123");
 		return false;
 	}
