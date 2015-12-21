@@ -1,9 +1,10 @@
 var Search = Backbone.View.extend({
-	el:$('body'),
+	el:$('.search'),
 	events:{
 		'click .search-bt':'click',
 		'blur .search-it':'blur',
 		'focus .search-it':'focus',
+		'keydown':'enter'
 	},
 	click:function (e) {
 		var val = $('.search-it').val(),aRes;
@@ -35,7 +36,13 @@ var Search = Backbone.View.extend({
 		if(val=='搜索'){
 			$('.search-it').val('');
 		}
+
 	},
+	enter:function(e){
+		if(e && e.keyCode==13){
+			this.click(e);
+		}
+	}
 });
 
 var ViewSearchResult = Backbone.View.extend({
