@@ -9,15 +9,18 @@ var Router = Backbone.Router.extend({
 	index:function () {
 		$('.page').hide();
 		$('.index').show();
+		com.lightCurNav($('.nav-a')[0]);
 		this.changeBg();
 	},
 	list:function () {
 		$('.page').hide();
 		$('.list').show();
+		com.lightCurNav($('.nav-a')[1]);
 	},
 	tags:function () {
 		$('.page').hide();
 		$('.tags').show();
+		com.lightCurNav($('.nav-a')[2]);
 	},
 	changeBg:function () {
 		var nBg = com.getCookie('nBg');
