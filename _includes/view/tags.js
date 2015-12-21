@@ -14,13 +14,13 @@ var Tags = Backbone.View.extend({
 		var tag = url.split('/tag=')[1];
 		var aArticleTitle = aData[tag];
 		com.aArticleTitle = aArticleTitle;
-		var tagsArticle = new TagsArticle();
+		var tagsArticle = new ViewTagsArticle();
 
 		return false;
 	}
 });
 // 文章列表子视图
-var TagsArticle = Backbone.View.extend({
+var ViewTagsArticle = Backbone.View.extend({
 	initialize:function () {
 		var oData = {
 			articleTitle:com.aArticleTitle
