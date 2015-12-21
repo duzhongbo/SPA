@@ -14,8 +14,14 @@ var Search = Backbone.View.extend({
 			location.hash='search='+val;
 			aRes=com.search(val,aArticle);
 			console.log(aRes);
+			var oData = {
+				article:aRes
+			}
+			$('.search-result-ul').html(this.template(oData));
+			$('.search-result').show();
 		}
 	},
+	template:_.template($('#tplSearchArticle').html()),
 	blur:function () {
 		var val = $('.search-it').val();
 		if(val==''){
