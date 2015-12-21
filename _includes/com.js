@@ -75,6 +75,8 @@ var com={
 	},
 	lightCurNav:function(obj){
 		$('.nav-a').removeClass('nav-cur-a');
-		$(obj).addClass('nav-cur-a');
+		if(obj){
+			$(obj).addClass('nav-cur-a');
+		}
 	}
 }
