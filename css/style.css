@@ -33,7 +33,7 @@ a:hover{color: #f60;}
 .nav-a{color: #fff;}
 .nav-cur-a{color: #f00;text-decoration: none;cursor: default;}
 .nav-cur-a:hover{color: #f00;}
-.search-it{width: 124px;color: #666}
+.search-it{width: 124px;color: #f00;}
 .search-bt{cursor: pointer;}
 .common-inner{margin-top: 35px;}
 .index{height: 100%;background-color: #000;}
