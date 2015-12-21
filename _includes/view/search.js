@@ -18,6 +18,7 @@ var Search = Backbone.View.extend({
 			var oData = {
 				article:aRes
 			}
+			$('.page').hide();
 			$('.search-result').show();
 			com.searchResult = aRes;
 			var v = new ViewSearchResult;
