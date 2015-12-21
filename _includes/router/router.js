@@ -34,6 +34,7 @@ var Router = Backbone.Router.extend({
 		$('.index').addClass(cls);
 	},
 	showDetail:function () {
+		com.lightCurNav();
 		$('.search-it').val('');
 		var url = (location.hash).split('#article')[1];
 		com.filterData(url,aArticle);
