@@ -34,6 +34,9 @@ var Router = Backbone.Router.extend({
 	search:function(keyword){
 		var aRes=com.search(keyword,aArticle);
 		console.log(aRes);
+		com.searchResult = aRes;
+		var v = new ViewSearchResult;
+		$('.search-result').show();
 	}
 });
 
