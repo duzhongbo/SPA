@@ -10,7 +10,7 @@ var Search = Backbone.View.extend({
 		var val = $('.search-it').val(),aRes;
 		console.log('click',val);
 		if(val== ''||val=='搜索'){
-			alert('输入不能为空！');
+			com.openPop('输入不能为空！');
 		}else{
 			location.hash='search='+val;
 			aRes=com.search(val,aArticle);

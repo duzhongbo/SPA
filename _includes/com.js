@@ -61,5 +61,16 @@ var com={
 			}
 		}
 		return data;
+	},
+	openPop:function(str){
+		$('.pop-bg').show();
+		$('.pop-alert').show();
+		$('.pop-tb').html(str);
+		$('.pop-close').click(function(){
+		    $('.pop-bg').hide();
+		    $('.pop-alert').hide();
+		    $('.pop-tb').html('');
+			
+		});
 	}
 }
