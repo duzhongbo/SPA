@@ -7,17 +7,20 @@ var Router = Backbone.Router.extend({
 		'search=:keyword':'search'
 	},
 	index:function () {
+		$('.search-it').val('');
 		$('.page').hide();
 		$('.index').show();
 		com.lightCurNav($('.nav-a')[0]);
 		this.changeBg();
 	},
 	list:function () {
+		$('.search-it').val('');
 		$('.page').hide();
 		$('.list').show();
 		com.lightCurNav($('.nav-a')[1]);
 	},
 	tags:function () {
+		$('.search-it').val('');
 		$('.page').hide();
 		$('.tags').show();
 		com.lightCurNav($('.nav-a')[2]);
@@ -31,6 +34,7 @@ var Router = Backbone.Router.extend({
 		$('.index').addClass(cls);
 	},
 	showDetail:function () {
+		$('.search-it').val('');
 		var url = (location.hash).split('#article')[1];
 		com.filterData(url,aArticle);
 	},
