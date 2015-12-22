@@ -3,34 +3,42 @@
 {% include model/model.js %}
 $(function () {
 	
-	var model = new Model;
-	
-	// 导航视图
-	{% include view/nav.js %}
-	var nav = new Nav({model:model});
+var model = new Model;
 
-	// 搜索视图
-	{% include view/search.js %}
-	var search = new Search();
-	
-	// 路由与历史管理
-	{% include router/router.js %}	
-	var router = new Router({model:model});
-	Backbone.history.start();
+// 导航视图
+{% include view/nav.js %}
+var nav = new Nav({model:model});
 
-	// 首页视图
-	{% include view/index.js %}
-	var index = new Index({model:model});
+// 搜索视图
+{% include view/search.js %}
+var search = new Search();
 
-	// 列表页视图
-	{% include view/list.js %}
-	var list = new List({model:model});	
+// 路由与历史管理
+{% include router/router.js %}	
+var router = new Router({model:model});
+Backbone.history.start();
 
-	// 文章页视图
-	{% include view/article.js %}
-	var article = new Article();
+// 首页视图
+{% include view/index.js %}
+var index = new Index({model:model});
 
-	// 标签视图
-	{% include view/tags.js %}
-	var tags = new Tags({model:model});
+// 列表页视图
+{% include view/list.js %}
+var list = new List({model:model});	
+
+// 文章页视图
+{% include view/article.js %}
+var article = new Article();
+
+// 标签视图
+{% include view/tags.js %}
+var tags = new Tags({model:model});
+
+// 遮罩层绑定点击事件
+$('.pop-bg').click(function(){
+	$('.pop').hide();
+	$(this).hide();
+})
+
+
 });
