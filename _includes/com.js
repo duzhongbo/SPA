@@ -40,7 +40,7 @@ var com={
 		var temp1,temp2
 		for(var i=0,len=aData.length;i<len;i++){
 			temp1 = aData[i];
-			temp2 = decodeURI(temp1.url);
+			temp2 = temp1.url;
 			if(temp2==sUrl){
 				$('.article-title').html(temp1.title);
 				$('.article-content').html(this.html_decode(temp1.content));
